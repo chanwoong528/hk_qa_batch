@@ -1,0 +1,25 @@
+{
+  "name": "hk_qa_batch",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cross-env NODE_ENV=prod node src/index.js",
+    "build": "cross-env NODE_ENV=prod tsc -p .",
+    "dev": "cross-env NODE_ENV=dev nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.19.2",
+    "ioredis": "^5.4.1",
+    "node-cron": "^3.0.3",
+    "redis": "^4.7.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "nodemon": "^3.1.4"
+  }
+}
