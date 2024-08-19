@@ -62,10 +62,15 @@ async function backupAndFlushBullMQData() {
 // cron.schedule('59 23 * * *', () => {
 //   backupAndFlushBullMQData();
 // });
+const everyOneMin = '*/1 * * * *'
+const everyMidNight = '59 23 * * *'
 
-cron.schedule('*/1 * * * *', () => {
-  backupAndFlushBullMQData();
-});
+cron.schedule(process.env.NODE_ENV === "dev"
+  ? everyOneMin
+  : everyMidNight,
+  () => {
+    backupAndFlushBullMQData();
+  });
 app.listen(4000, () => {
   console.log('Batch Server is running on port 4000');
 });
