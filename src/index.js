@@ -58,10 +58,6 @@ async function backupAndFlushBullMQData() {
   }
 }
 
-// Schedule backup and flush every minute
-// cron.schedule('59 23 * * *', () => {
-//   backupAndFlushBullMQData();
-// });
 const everyOneMin = '*/1 * * * *'
 const everyMidNight = '59 23 * * *'
 
