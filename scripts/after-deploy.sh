@@ -1,5 +1,5 @@
 #!/bin/bash
-REPOSITORY=/home/ubuntu/build
+REPOSITORY=/home/ubuntu/batch
 
 cd $REPOSITORY
 export NVM_DIR="$HOME/.nvm"
